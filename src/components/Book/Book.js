@@ -7,7 +7,7 @@ const Book = (props) => {
   const { _id, name, author, description, price } = props.book;
   const deleteHandler = async () => {
     await axios
-      .delete(`http://localhost:3001/books/${_id}`)
+      .delete(`https://cercle-x-backend.vercel.app/${_id}`)
       .then((res) => res.data)
       .then(() => history("/"))
       .then(() => history("/books"));

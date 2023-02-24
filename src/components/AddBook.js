@@ -29,7 +29,7 @@ const AddBook = () => {
 
   const sendRequest = async () => {
     await axios
-      .post("http://localhost:3001/books", {
+      .post("https://cercle-x-backend.vercel.app/", {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),

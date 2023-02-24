@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Book.css";
 import axios from "axios";
 import Book from "./Book";
-const URL = "http://localhost:3001/books";
+const URL = "https://cercle-x-backend.vercel.app/";
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
 };
