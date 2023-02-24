@@ -10,7 +10,7 @@ const Book = (props) => {
       .delete(`https://cercle-x-backend.vercel.app/${_id}`)
       .then((res) => res.data)
       .then(() => history("/"))
-      .then(() => history("/books"));
+      .then(() => history("/"));
   };
 
   return (
@@ -19,7 +19,7 @@ const Book = (props) => {
       <h3>{name}</h3>
       <p>{description}</p>
       <h3>Rs {price}</h3>
-      <Button LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }}>
+      <Button LinkComponent={Link} to={`/${_id}`} sx={{ mt: "auto" }}>
         Update
       </Button>
       <Button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
